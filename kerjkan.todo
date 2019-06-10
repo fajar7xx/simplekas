@@ -1,0 +1,18 @@
+lengkapi aplikasi sederhana ini dengan :
+ ☐ uuid generator ramsey
+ ☐ date time picker
+ ☐ sweat alertjs
+ ☐ auto numbering jquery plainmask
+ ☐ authenticaton
+ ☐ line chart utnu kmengetahui arus kas masuk
+ ☐ pie chart untuk mengetahui kas keluar pada poin poin mana aja
+ ☐ databaswe aka ndi rombak untuk pemasukan dan pengeluaran
+
+
+rancangan database :
+  ☐ admin
+  ☐ kas di pecah menjadi: 
+    ☐ pemasukan
+    ☐ pengeluaran
+  ☐ kategori belanja
+  

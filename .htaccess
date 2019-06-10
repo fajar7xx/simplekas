@@ -2,7 +2,11 @@
 RewriteEngine on
 
 RewriteRule ^login$ login.php [L]
-
+RewriteRule ^logout$ logout.php [L]
+RewriteRule ^kas-masuk$ index.php?page=kas_masuk [L]
+RewriteRule ^kas-keluar$ index.php?page=kas_keluar [L]
+RewriteRule ^rekap$ index.php?page=rekap [L]
+RewriteRule ^manajemen$ index.php?page=manajemen [L]
 
 Options All -Indexes
 </IfModule>
