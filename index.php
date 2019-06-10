@@ -1,7 +1,7 @@
 <?php  
 require_once 'config/config.php';
 require_once 'function/init.php';
-
+require_once 'auth/auth.php';
 // if(!isset($_SESSION['admin'])){
 // 	header('Location:login.php');
 // 	exit();
@@ -41,7 +41,7 @@ require_once 'function/init.php';
 		<!-- Sidebar -->
 		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 			<!-- Sidebar - Brand -->
-			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
 				<div class="sidebar-brand-icon rotate-n-15">
 					<i class="fas fa-laugh-wink"></i>
 				</div>
@@ -330,7 +330,7 @@ require_once 'function/init.php';
 					<span aria-hidden="true">×</span>
 					</button>
 				</div>
-				<form action="<?=base_url('include/manajemen_user/proses.php');?>" method="post" autocomplete="off">
+				<form action="<?=base_url('include/manajemen_user/proses.php');?>" method="post" autocomplete="off" onsubmit="return checkForm(this)">
 					<div class="modal-body">
 
 						<div class="form-group">
@@ -353,6 +353,8 @@ require_once 'function/init.php';
 							<label for="password2">repeat password</label>
 							<input type="password" name="password2" id="password2" class="form-control" placeholder="retype the password">
 						</div>
+
+						
 
 					</div>
 					<div class="modal-footer">
@@ -431,13 +433,24 @@ require_once 'function/init.php';
 			$("#modal_edit2 #pengeluaran").val(keluar);
 		});
 
-		// matching password
-		$("#password2").change(function(){
-			if($(this).val() != $("#password1").val()){
-				alert("values do not match");
-               //more processing here
-           }
-       	});
+       	// pasword-checker simple just cheack logh char and missmatch
+       	function checkForm(form){
+       		if(form.password1.value != "" && form.password1.value == form.password2.value){
+       			if(form.password1.value.length < 8 ){
+       				alert("Error : password must contain 8 character!");
+       				form.password1.focus();
+       				return false;
+       			}
+       		}
+       		else{
+   				alert("Error : Please check that you've enterer and confirmed your password!");
+   				form.password1.focus();
+   				return false;
+   			}
+
+   			return true;
+       	}
+
 	</script>
 </body>
 </html>

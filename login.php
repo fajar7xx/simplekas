@@ -2,6 +2,34 @@
 require_once 'config/config.php';
 require_once 'function/init.php';
 
+if(isset($_SESSION['user'])){
+  header('Location: index.php');
+  exit();
+}
+
+if(isset($_POST['login'])){
+  $user = $_POST['user'];
+  $pass = $_POST['pass'];
+
+  $query = "SELECT * FROM admin WHERE username = '$user' OR email = '$user'";
+  $result = mysqli_query($conn, $query);
+  
+  // cek username
+  if(mysqli_num_rows($result) == 1){
+
+    // cek passwordnya
+    $row = mysqli_fetch_assoc($result);
+    if(password_verify($pass, $row['password'])){
+      // set session
+      $_SESSION['user'] = $row;
+      header("Location: index.php");
+      print_r($_SESSION);
+      exit;
+    }
+  }
+  $error = true;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +43,7 @@ require_once 'function/init.php';
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Login</title>
+  <title>SimpleKas - Login</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?=base_url('node_modules/startbootstrap-sb-admin-2/');?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,19 +73,19 @@ require_once 'function/init.php';
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
-                  <form class="user">
+                  <form class="user" method="post" action="" autocomplete="off">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="text" class="form-control form-control-user" id="user" name="user" aria-describedby="user" placeholder="Enter Email Address or username..." autofocus="on">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" class="form-control form-control-user" id="pass" name="pass" placeholder="Password">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <div class="custom-control custom-checkbox small">
                         <input type="checkbox" class="custom-control-input" id="customCheck">
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
-                    </div>
+                    </div> -->
                     <button type="submit" name="login" class="btn btn-primary btn-user btn-block">Login</button>
                   </form>
                   <hr>

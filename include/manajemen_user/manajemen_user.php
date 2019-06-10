@@ -19,6 +19,7 @@
 							<th>Email</th>
 							<th>Username</th>
 							<th>Nama</th>
+							<th>Aktif</th>
 							<th>Level</th>
 							<th>Aksi</th>
 						</tr>
@@ -35,13 +36,24 @@
 								<td><?= $data['email'];?></td>
 								<td><?=$data['username'];?></td>
 								<td><?=$data['nama'];?></td>
+								<td>
+									<?php if($data['aktif'] === '1'): ?>
+										<button type="button" class="btn btn-success btn-sm">
+											Aktif
+										</button>
+									<?php else: ?>
+										<button type="button" class="btn btn-danger btn-sm">
+											Non-Aktif
+										</button>
+									<?php endif; ?>	
+								</td>
 								<td><?=$data['level'];?></td>
 								<td>
 									<div class="btn-group btn-group-sm" role="group" aria-label="grupbtn">
 										<a href="" class="btn btn-primary">View</a>
-										<a href="" class="btn btn-primary">Edit</a>
-										<a href="" class="btn btn-primary">Disable</a>
-										<a href="" class="btn btn-primary">Delete</a>
+										<a href="" class="btn btn-secondary">Edit</a>
+										<a href="" class="btn btn-warning">Disable</a>
+										<a href="" class="btn btn-danger">Delete</a>
 									</div>
 								</td>
 							</tr>

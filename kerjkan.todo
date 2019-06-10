@@ -3,14 +3,14 @@ lengkapi aplikasi sederhana ini dengan :
  ☐ date time picker
  ☐ sweat alertjs
  ☐ auto numbering jquery plainmask
- ☐ authenticaton
+ ✔ authenticaton simple @done (19-06-10 17:31)
  ☐ line chart utnu kmengetahui arus kas masuk
  ☐ pie chart untuk mengetahui kas keluar pada poin poin mana aja
- ☐ databaswe aka ndi rombak untuk pemasukan dan pengeluaran
+ ☐ databaswe akan di rombak untuk pemasukan dan pengeluaran
 
 
 rancangan database :
-  ☐ admin
+  ✔ admin @done (19-06-10 17:31)
   ☐ kas di pecah menjadi: 
     ☐ pemasukan
     ☐ pengeluaran
