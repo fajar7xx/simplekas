@@ -59,7 +59,7 @@ require_once 'function/init.php';
 			<!-- Nav Item - Charts -->
 			<li class="nav-item">
 				<a class="nav-link" href="kas-masuk">
-					<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+					<i class="fas fa-download fa-sm fa-fw mr-2 text-gray-400"></i>
 					<!-- <i class="fas fa-fw fa-chart-area"></i> -->
 					<span>Kas Masuk</span>
 				</a>
@@ -67,14 +67,14 @@ require_once 'function/init.php';
 			<!-- Nav Item - Tables -->
 			<li class="nav-item">
 				<a class="nav-link" href="kas-keluar">
-					<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+					<i class="fas fa-upload fa-sm fa-fw mr-2 text-gray-400"></i>
 					<!-- <i class="fas fa-fw fa-table"></i> -->
 					<span>Kas Keluar</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="rekap">
-					<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+					<i class="fas fa-balance-scale fa-sm fa-fw mr-2 text-gray-400"></i>
 					<!-- <i class="fas fa-fw fa-table"></i> -->
 					<span>Rekapitulasi Kas</span>
 				</a>
@@ -115,8 +115,8 @@ require_once 'function/init.php';
 						<!-- Nav Item - User Information -->
 						<li class="nav-item dropdown no-arrow">
 							<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-								<img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+								<span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin Ganteng</span>
+								<img class="img-profile rounded-circle" src="assets/img/pexels-user.jpeg">
 							</a>
 							<!-- Dropdown - User Information -->
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

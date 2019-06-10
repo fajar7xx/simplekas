@@ -36,7 +36,7 @@ $saldo = $pemasukan - $pengeluaran;
 			<div class="card-body">
 				<div class="row no-gutters align-items-center">
 					<div class="col mr-2">
-						<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total kas Keluar</div>
+						<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total kas Keluar</div>
 						<div class="h5 mb-0 font-weight-bold text-gray-800">Rp. <?=number_format($pengeluaran);?></div>
 					</div>
 					<div class="col-auto">
@@ -52,7 +52,7 @@ $saldo = $pemasukan - $pengeluaran;
 			<div class="card-body">
 				<div class="row no-gutters align-items-center">
 					<div class="col mr-2">
-						<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Saldo Akhir</div>
+						<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Saldo Akhir</div>
 						<div class="row no-gutters align-items-center">
 							<div class="col-auto">
 								<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">RP. <?=number_format($saldo);?></div>
@@ -60,7 +60,7 @@ $saldo = $pemasukan - $pengeluaran;
 						</div>
 					</div>
 					<div class="col-auto">
-						<i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+						<i class="fas fa-balance-scale fa-2x text-gray-300"></i>
 					</div>
 				</div>
 			</div>
@@ -74,18 +74,18 @@ $saldo = $pemasukan - $pengeluaran;
 		<div class="card shadow mb-4">
 			<!-- Card Header - Dropdown -->
 			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-				<h6 class="m-0 font-weight-bold text-primary">Kas Masuk</h6>
-				<div class="dropdown no-arrow">
+				<h6 class="m-0 font-weight-bold text-primary">Pemasukan</h6>
+				<!-- <div class="dropdown no-arrow">
 					<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-						<div class="dropdown-header">Interval waktu:</div>
+						<div class="dropdown-header">Chart:</div>
 						<a class="dropdown-item" href="#">Harian</a>
 						<a class="dropdown-item" href="#">Bulanan</a>
 						<a class="dropdown-item" href="#">Tahunan</a>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<!-- Card Body -->
 			<div class="card-body">
@@ -101,7 +101,7 @@ $saldo = $pemasukan - $pengeluaran;
 			<!-- Card Header - Dropdown -->
 			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
 				<h6 class="m-0 font-weight-bold text-primary">kategori</h6>
-				<div class="dropdown no-arrow">
+				<!-- <div class="dropdown no-arrow">
 					<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
 					</a>
@@ -110,7 +110,7 @@ $saldo = $pemasukan - $pengeluaran;
 						<a class="dropdown-item" href="#">Pemasukan</a>
 						<a class="dropdown-item" href="#">Pengeluaran</a>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<!-- Card Body -->
 			<div class="card-body">
@@ -119,13 +119,10 @@ $saldo = $pemasukan - $pengeluaran;
 				</div>
 				<div class="mt-4 text-center small">
 					<span class="mr-2">
-						<i class="fas fa-circle text-primary"></i> Direct
+						<i class="fas fa-circle text-primary"></i> Pemasukan
 					</span>
 					<span class="mr-2">
-						<i class="fas fa-circle text-success"></i> Social
-					</span>
-					<span class="mr-2">
-						<i class="fas fa-circle text-info"></i> Referral
+						<i class="fas fa-circle text-success"></i> Pengeluaran
 					</span>
 				</div>
 			</div>
